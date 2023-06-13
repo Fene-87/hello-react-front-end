@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchGreetings } from '../redux/features/greetings/greetingsSlice';
 
 const Greetings = () => {
@@ -8,14 +8,14 @@ const Greetings = () => {
 
   useEffect(() => {
     dispatch(fetchGreetings());
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
     <div>
-        <h1>Here we go again</h1>
-        {greetings ? (<h2>{greetings.message}</h2>) : status}
+      <h1>Here we go again</h1>
+      {greetings ? (<h2>{greetings.message}</h2>) : status}
     </div>
-  )
-}
+  );
+};
 
-export default Greetings
+export default Greetings;
